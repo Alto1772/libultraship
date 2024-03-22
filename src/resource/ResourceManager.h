@@ -43,7 +43,7 @@ class ResourceManager {
     LoadDirectoryAsync(const std::string& searchMask, bool priority = false);
     void DirtyDirectory(const std::string& searchMask);
     void UnloadDirectory(const std::string& searchMask);
-    bool OtrSignatureCheck(const char* fileName);
+    static bool OtrSignatureCheck(const char* fileName);
 
   protected:
     std::shared_ptr<File> LoadFileProcess(const std::string& filePath,
