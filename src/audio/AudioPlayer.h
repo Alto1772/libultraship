@@ -17,15 +17,15 @@ class AudioPlayer {
 
     bool IsInitialized(void);
 
-    constexpr int GetSampleRate() const {
-        return 44100;
-    }
+    int GetSampleRate() const;
+    int SetSampleRate(int sampleRate);
 
   protected:
     virtual bool DoInit(void) = 0;
 
   private:
     bool mInitialized;
+    int mSampleRate;
 };
 } // namespace Ship
 
